@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: tahoma;
+        }
+
+        #input-firstname {
+            border: solid 1px gray;
+            border-radius: 4px;
+            padding: 4px;
+            margin-right: 40px;
+            width:100%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 2px;
+            text-indent: 2px;
+        }
+
+        #menu {
+            background-color: lightgray;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            left: 0px;
+        }
+        .menu-item{
+            text-align: center;
+            padding: 8px;
+        }
+
+        .menu-item:hover{
+            background-color: gray;
+        }
+
+        #display-number {
+            font-size: 150px;
+            color: blue;
+            text-align: center;
+            padding-left: 60px;
+        }
+
+        #usd-unit {
+            position: relative;
+            right: 30px;
+            top: -100;
+            font-size: 20px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- MENU -->
+    <div id="menu">
+        <table style="width: 100%;">
+            <tr>
+                <td class="menu-item">Menu1</td>
+                <td class="menu-item">Menu2</td>
+                <td class="menu-item">Menu3</td>
+                <td class="menu-item">Menu4</td>
+            </tr>
+        </table>
+    </div>
+    <div style="text-align: center;">
+        <h1>
+            App Name
+        </h1>
+        <hr style="border: solid 1px lightgray;">
+        <div id="display-number">
+            <span id="display-text">--</span>
+            <span id="usd-unit">USD</span>
+        </div>
+        <hr style="border: solid 1px lightgray;">
+        <table style="width: 100%;" border="0">
+            <tr>
+                <td style="text-align: left;">
+                    Name
+                </td>
+                <td style="text-align: left; display: none; color: red;">
+                    *** ไม่ถูกต้อง
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="padding-right: 10px;">
+                    <div>
+                        <input id="input-firstname" type="text" name="firstname" style="margin-bottom: 6px" id="firstname">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="button" onclick="btnClick()" name="btn-submit" id="btn-submit" style="width: 100%; padding: 8px;" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function btnClick() {
+            var firstname = document.getElementById('input-firstname').value;
+            document.getElementById('display-text').innerHTML = firstname;
+        }
+    </script>
+</body>
+</html>

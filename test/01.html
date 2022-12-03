@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+
+    <style>
+        #display
+        {
+            font-size: 100px;
+            text-align: center;
+        }
+        #Display-USD
+        {
+            font-size: 15px;
+        }
+        #menu-item
+        {
+            text-align: center;
+        }
+
+        body
+        {
+          font-family: Tahoma;
+        }
+        h1
+        {
+            text-align: center;
+        }
+        #menu
+        {
+            width: 99.8%;
+            border: 1px solid dimgray;
+            position: fixed;
+            bottom: 1px;
+            left: 0px;
+            
+        }
+        .menu-item
+        {
+            text-align: center;
+            padding: 8px;
+            
+        }
+        .menu-item:hover
+        {
+            background-color: dimgray;
+        }
+
+        #Text
+        {
+            border-radius: 5px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-left: 4px;
+            text-indent: 4px;
+            width: calc(100% - 10px);
+            margin-right: 5px;
+            
+        }
+
+        #submitbutton
+        {
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <h1>
+        <div id="Appname">
+            Appname
+        </div>
+    </h1>
+
+    <hr>
+    <div id="display">
+        <span id="Display-Text">Text</span>
+        <span id="Display-USD">USD</span>
+    </div>
+    <hr>
+
+    <table style="width:100%"> <!-- border="1px solid black;" -->
+        <tr>
+            <td id="Text-Name" style="font-size:20px;">Name</td>
+            <td id="...." style="font-size:20px;">....</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <div>
+                    <input id="Text" type="text"  style="margin-bottom: 6px">
+                    <input id="submitbutton" type="button" value="submit" onclick="button()">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div id="menu">
+        <table style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td id="menu1" class="menu-item" onclick="menu1()" >menu1</td>
+                    <td class="menu-item" onclick="menu2()">menu-2</td>
+                    <td class="menu-item" onclick="menu3()">menu-3</td>
+                    <td class="menu-item" onclick="menu4()">menu-4</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function button()
+        {
+        var change = document.getElementById("Text").value
+        document.getElementById("Display-Text").innerHTML = change
+        // console.log(change);
+        }
+
+        function menu1()
+        {
+            var callmenu = document.getElementById("menu1").innerHTML
+            // console.log(callmenu)
+            window.location.href = callmenu+".html";
+        }
+
+        function menu2()
+        {
+            window.location.href = 'menu2.html';
+        }
+
+        function menu3()
+        {
+            window.location.href = 'menu3.html';
+        }
+
+        function menu4()
+        {
+            window.location.href = 'menu4.html';
+        }
+
+    </script>
+
+</body>
+</html>
